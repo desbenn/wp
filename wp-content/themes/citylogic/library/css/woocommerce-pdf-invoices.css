@@ -1,0 +1,103 @@
+/* 
+ * Out the Box Themes
+ * Base styling for WooCommerce PDF Invoices & Packing Slips
+ */
+
+/* Improve base readability */
+body {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Make document titles clearer */
+h1.document-type-label {
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+.order-details {
+    border-collapse: collapse;
+}
+
+/* Order details table header */
+.order-details thead th {
+    background: #f5f5f5;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 8px 6px;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+}
+
+/* Order items */
+.order-details tbody td {
+    padding: 8px 6px;
+    border-bottom: 1px solid #eeeeee;
+    vertical-align: top;
+}
+
+/* Product name spacing */
+.order-details .product-name {
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Totals section spacing */
+.notes-totals .totals th,
+.notes-totals .totals td {
+    padding: 6px 0;
+}
+
+/* Improve spacing between sections */
+.customer-notes,
+.order-notes {
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* ---------------------------------------
+ * Product meta enhancements
+ * --------------------------------------- */
+
+.otb-wcpdf-product-sku {
+    margin-top: 3px;
+    font-size: 10px;
+    color: #666666;
+    letter-spacing: 0.02em;
+}
+
+/* Improve invoice totals / order summary readability */
+.totals {
+    margin-top: 18px;
+    border-top: 2px solid #dcdcdc;
+    padding-top: 8px;
+}
+
+.totals th,
+.totals td {
+    padding: 5px 6px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.totals th {
+    font-weight: 600;
+    text-align: left;
+}
+
+.totals td {
+    text-align: right;
+}
+
+/* Make the final total stand out */
+.totals .total th,
+.totals .total td,
+.totals tr:last-child th,
+.totals tr:last-child td {
+    font-size: 13px;
+    font-weight: 700;
+    border-top: 1px solid #dcdcdc;
+    padding-top: 8px;
+}
