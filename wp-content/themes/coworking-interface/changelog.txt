@@ -1,0 +1,10 @@
+= 1.0.2 =
+* Fixed: Updated the bundled fonts licensing information in readme.txt to clarify that all bundled fonts are sourced from Google Fonts.
+
+= 1.0.1 =
+* Added: Detailed licensing information for all bundled Google Fonts in `assets/fonts/license-info.txt`.
+* Added: Explicit CC0 1.0 Universal license declaration for bundled images in `readme.txt`.
+* Fixed: Prefixed all global script and style enqueue handles (e.g., `coworking-interface-script-js`) to meet WordPress.org theme directory requirements.
+
+= 1.0.0 =
+* Initial release

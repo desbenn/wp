@@ -1,0 +1,25 @@
+.wp-core-ui #customize-controls #accordion-section-coworking_interface_upsell_section.control-section .accordion-section-title {
+    border-left-color: #1976f2;
+}
+
+.wp-core-ui #customize-controls #accordion-section-coworking_interface_upsell_section.control-section .accordion-section-title:focus,
+.wp-core-ui #customize-controls #accordion-section-coworking_interface_upsell_section.control-section .accordion-section-title:hover,
+.wp-core-ui #customize-controls #accordion-section-coworking_interface_upsell_section.control-section.open .accordion-section-title,
+.wp-core-ui #customize-controls #accordion-section-coworking_interface_upsell_section.control-section:hover > .accordion-section-title {
+    color: #3858e9;
+    border-left-color: #3858e9;
+}
+
+#accordion-section-coworking_interface_upsell_section .accordion-section-title button.accordion-trigger {
+    background: #1976f2;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#accordion-section-coworking_interface_upsell_section .accordion-section-title button.accordion-trigger:focus {
+    box-shadow: none;
+    outline: none;
+}

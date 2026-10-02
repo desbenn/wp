@@ -95,8 +95,8 @@ if ($_SERVER['HTTP_HOST'] === 'localhost') {
     define('WP_HOME', 'http://localhost/wp');
     define('WP_SITEURL', 'http://localhost/wp');
 } else {
-    define('WP_HOME', 'https://app.adassa.com.jm/wp');
-    define('WP_SITEURL', 'https://app.adassa.com.jm/wp');
+    define('WP_HOME', 'https://dev.adassa.com.jm/wp');
+    define('WP_SITEURL', 'https://dev.adassa.com.jm/wp');
 }
 
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&

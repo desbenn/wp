@@ -1,0 +1,1081 @@
+/* ==========================================================================
+*  Coworking Interface admin page related styles.
+*  ========================================================================== */
+/**
+ * Import configuration file with variables.
+ */
+/**
+ * Import base admin page styles.
+ */
+/*****************************************/
+/* Admin page base styles
+/*****************************************/
+.coworking-interface-toggle {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.coworking-interface-toggle *,
+.coworking-interface-toggle *:before,
+.coworking-interface-toggle *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+.coworking-interface-toggle input[type=checkbox] {
+    display: none;
+}
+.coworking-interface-toggle input[type=checkbox]:checked + label .coworking-interface-toggle-switch {
+    background-color: #424F7A !important;
+}
+.coworking-interface-toggle input[type=checkbox]:checked + label .coworking-interface-toggle-switch:after {
+    -webkit-transform: translateX(11px);
+    -ms-transform: translateX(11px);
+    transform: translateX(11px);
+}
+.coworking-interface-toggle .coworking-interface-toggle-switch {
+    background-color: #c7d5df;
+    border-radius: 8px;
+    padding: 2px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    outline: 0;
+    display: block;
+    width: 27px;
+    height: 16px;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0 10px 0 0;
+}
+.coworking-interface-toggle .coworking-interface-toggle-switch:after {
+    position: relative;
+    display: block;
+    content: "";
+    width: 12px;
+    height: 12px;
+    left: 0;
+    border-radius: 50%;
+    background: #ffffff;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+}
+.coworking-interface-toggle label {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #131313;
+}
+.coworking-interface-toggle label:hover .coworking-interface-toggle-switch {
+    background-color: #86a4ba;
+}
+.coworking-interface-toggle.large-toggle .coworking-interface-toggle-switch {
+    border-radius: 20px;
+    width: 36px;
+    height: 20px;
+}
+.coworking-interface-toggle.large-toggle .coworking-interface-toggle-switch:after {
+    width: 16px;
+    height: 16px;
+}
+.coworking-interface-toggle.large-toggle input[type=checkbox]:checked + label .coworking-interface-toggle-switch:after {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+#wpcontent {
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #131313;
+    min-height: calc(100vh - 190px);
+}
+#wpbody-content {
+    padding: 0 35px;
+}
+#wpbody-content h2 {
+    -js-display: inline-flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: #131313;
+    line-height: 1.2;
+}
+#wpbody-content h2 svg {
+    width: 22px;
+    height: 22px;
+    margin-left: 7px;
+}
+#wpcontent *,
+#wp-content *,
+#wp-content *:before,
+#wp-content *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+#wpbody {
+    padding: 0;
+}
+#wpfooter {
+    position: relative;
+    padding: 0 35px 10px 35px;
+}
+body {
+    background-color: #f1f3f5;
+    color: #131313;
+}
+.spinner {
+    display: none;
+}
+.spinner.activated,
+.spinner.visible {
+    display: inline-block;
+    visibility: visible;
+}
+.interface-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.notice,
+.update-nag,
+div.error,
+div.updated {
+    margin: 5px auto !important;
+    border-top: solid 1px #d6e1e8;
+    border-right: solid 1px #d6e1e8;
+    border-bottom: solid 1px #d6e1e8;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    max-width: 1280px;
+    display: none;
+}
+.notice.notice-info,
+.update-nag.notice-info,
+div.error.notice-info,
+div.updated.notice-info {
+    border-left-color: #424F7A;
+}
+.notice.notice-warning,
+.update-nag.notice-warning,
+div.error.notice-warning,
+div.updated.notice-warning {
+    border-left-color: #f0b849;
+}
+.notice.coworking-interface-notice,
+.update-nag.coworking-interface-notice,
+div.error.coworking-interface-notice,
+div.updated.coworking-interface-notice {
+    display: block;
+}
+.notice p a,
+.update-nag p a,
+div.error p a,
+div.updated p a {
+    color: #424F7A;
+}
+.notice p a:hover,
+.update-nag p a:hover,
+div.error p a:hover,
+div.updated p a:hover {
+    color: #506bf3;
+}
+.interface-info-icon {
+    cursor: default;
+}
+.interface-info-icon:hover svg {
+    fill: #95b1c3;
+}
+.interface-warning-icon svg {
+    fill: #f0b849;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.coworking-interface-buttons {
+    margin-top: 18px;
+}
+.interface-button,
+body.wp-core-ui .interface-button {
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 2px;
+    font-size: 13px;
+    padding: 3px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -js-display: inline-flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    line-height: 1.8;
+    height: auto;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+.interface-button.large-button,
+body.wp-core-ui .interface-button.large-button {
+    padding: 8px 18px;
+    font-size: 14px;
+}
+.interface-button.primary,
+body.wp-core-ui .interface-button.primary {
+    background-color: #424F7A;
+    color: #FFF;
+}
+.interface-button.secondary,
+body.wp-core-ui .interface-button.secondary {
+    color: #66717f;
+    border-color: #c7d5df;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 400;
+}
+.interface-button.secondary:hover,
+.interface-button.secondary:focus,
+body.wp-core-ui .interface-button.secondary:hover,
+body.wp-core-ui .interface-button.secondary:focus {
+    border-color: #728191;
+    color: #131313;
+    background-color: rgba(0, 0, 0, 0);
+}
+.interface-button:hover,
+.interface-button:focus,
+body.wp-core-ui .interface-button:hover,
+body.wp-core-ui .interface-button:focus {
+    background-color: #506bf3;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+.interface-button:active,
+body.wp-core-ui .interface-button:active {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+.interface-button[disabled=disabled],
+body.wp-core-ui .interface-button[disabled=disabled] {
+    opacity: 0.25;
+    pointer-events: none;
+}
+.interface-button svg,
+body.wp-core-ui .interface-button svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+}
+.coworking-interface-filters {
+    margin-left: auto;
+    padding-left: 18px;
+}
+.coworking-interface-dropdown-filter {
+    text-decoration: none;
+    color: #66717f;
+    position: relative;
+    padding: 7px 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.coworking-interface-dropdown-filter:hover,
+.coworking-interface-dropdown-filter:focus {
+    color: #131313;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.coworking-interface-dropdown-filter.open > ul {
+    display: block;
+}
+.coworking-interface-dropdown-filter > ul {
+    display: none;
+    margin: 0;
+    padding: 10px 0;
+    position: absolute;
+    top: 100%;
+    right: -6px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    width: 180px;
+    z-index: 99;
+    -webkit-box-shadow: 0 0 40px rgba(51, 59, 72, 0.2);
+    box-shadow: 0 0 40px rgba(51, 59, 72, 0.2);
+}
+.coworking-interface-dropdown-filter > ul > li {
+    display: block;
+    padding: 5px 25px;
+    margin-bottom: 5px;
+    color: #66717f;
+    line-height: 1.4;
+}
+.coworking-interface-dropdown-filter > ul > li:last-child {
+    margin-bottom: 0;
+}
+.coworking-interface-dropdown-filter > ul > li:hover,
+.coworking-interface-dropdown-filter > ul > li:focus {
+    color: #ffffff;
+    background-color: #424F7A;
+}
+.coworking-interface-dropdown-filter > ul > li.current {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #131313;
+}
+.coworking-interface-section-title {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.coworking-interface-modal {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(44, 46, 58, 0.75);
+    z-index: 99999;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow-y: scroll;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-out 0.2s;
+    transition: all 0.2s ease-out 0.2s;
+}
+.coworking-interface-modal .coworking-interface-modal-container {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.coworking-interface-modal.coworking-interface-block {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.coworking-interface-modal.coworking-interface-visible {
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.coworking-interface-modal.coworking-interface-visible .coworking-interface-modal-container {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+/**
+ * Import tooltips and info icon.
+ */
+/*****************************************/
+/* Coworking Interface tooltip and info icon.
+/*****************************************/
+.interface-info-icon,
+.interface-warning-icon {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: 5px;
+    position: relative;
+}
+.interface-info-icon svg,
+.interface-warning-icon svg {
+    fill: #b5c9d6;
+}
+.interface-info-icon:hover svg,
+.interface-info-icon:focus svg,
+.interface-warning-icon:hover svg,
+.interface-warning-icon:focus svg {
+    fill: #648da8;
+}
+.interface-info-icon:hover .interface-tooltip,
+.interface-info-icon:focus .interface-tooltip,
+.interface-warning-icon:hover .interface-tooltip,
+.interface-warning-icon:focus .interface-tooltip {
+    display: block;
+}
+.interface-tooltip {
+    display: none;
+    position: absolute;
+    background-color: #131313;
+    color: #d6e1e8;
+    font-size: 13px;
+    font-style: normal;
+    width: 300px;
+    padding: 16px 18px;
+    z-index: 991;
+    border-radius: 3px;
+    line-height: 1.6;
+    bottom: 100%;
+    -webkit-transform: translate(0, -13px);
+    -ms-transform: translate(0, -13px);
+    transform: translate(0, -13px);
+}
+.interface-tooltip:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #131313;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: calc(100% - 5px);
+    left: var(--tooltip-left);
+    margin-left: 14px;
+}
+.interface-tooltip.right-tooltip {
+    left: 100%;
+    top: 50%;
+    -webkit-transform: translate(13px, -50%);
+    -ms-transform: translate(13px, -50%);
+    transform: translate(13px, -50%);
+}
+.interface-tooltip.top-right-tooltip {
+    right: 0;
+    bottom: 100%;
+    -webkit-transform: translate(0, 13px);
+    -ms-transform: translate(0, 13px);
+    transform: translate(0, 13px);
+}
+.interface-tooltip.top-right-tooltip:after {
+    top: calc(100% - 6px);
+    left: calc(100% - 25px);
+    margin-left: 0;
+}
+.interface-tooltip.small-tooltip {
+    top: 5px;
+    bottom: auto;
+    left: 50%;
+    width: auto;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 6px 10px;
+    font-size: 11px;
+    line-height: 1.5;
+    white-space: nowrap;
+    font-weight: 400;
+}
+.interface-tooltip.small-tooltip:after {
+    display: none;
+}
+/**
+ * Import admin page header styles.
+ */
+/* ==========================================================================
+*  Coworking Interface admin page header styles.
+*  ========================================================================== */
+#coworking-interface-header {
+    padding: 12px 35px;
+    background-color: #ffffff;
+    position: relative;
+    border-bottom: 1px solid #d6e1e8;
+    margin-bottom: 9px;
+}
+#coworking-interface-header > .interface-container {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+#coworking-interface-header .coworking-interface-logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+#coworking-interface-header .coworking-interface-logo:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: thin dotted #7f8a99;
+    outline-offset: 6px;
+}
+#coworking-interface-header .coworking-interface-header-action {
+    margin-left: auto;
+    -js-display: inline-flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 13px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+#coworking-interface-header .coworking-interface-header-action > a {
+    border-radius: 3px;
+    padding: 5px 13px;
+    text-decoration: none;
+    font-weight: 500;
+}
+#coworking-interface-header .coworking-interface-header-action > a:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+/**
+ * Import admin tabs styles.
+ */
+/* ==========================================================================
+*  Coworking Interface admin page tabs styles.
+*  ========================================================================== */
+.coworking-interface-tabs {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 9px 0 18px 0;
+    background-color: #ffffff;
+    border: 1px solid #d6e1e8;
+    border-radius: 3px;
+}
+.coworking-interface-tabs > ul {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 20px;
+}
+.coworking-interface-tabs > ul > li {
+    width: auto;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+    text-align: center;
+    margin: 0 10px;
+}
+.coworking-interface-tabs > ul > li:first-child {
+    margin-left: 0;
+}
+.coworking-interface-tabs > ul > li:last-child {
+    margin-right: 0;
+}
+.coworking-interface-tabs > ul > li:hover > a {
+    color: #131313;
+}
+.coworking-interface-tabs > ul > li.current-item {
+    border-bottom-color: #424F7A;
+}
+.coworking-interface-tabs > ul > li.current-item > a {
+    color: #424F7A;
+    font-weight: 500;
+}
+.coworking-interface-tabs > ul > li > a {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none;
+    width: auto;
+    padding: 10px 0;
+    color: #66717f;
+    font-weight: 400;
+}
+.coworking-interface-tabs > ul > li > a:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: thin dotted #7f8a99;
+}
+/**
+ * Import about page styles.
+ */
+#wpbody-content .coworking-interface-section-title {
+    margin: 19px 0 8px;
+}
+#wpbody-content h2.coworking-interface-section-title {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#wpbody-content .coworking-interface-section {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 15px 35px;
+    margin-bottom: 50px !important;
+}
+#wpbody-content .coworking-interface-section.large-section {
+    padding: 40px 35px;
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: 1px solid #d6e1e8;
+    background-color: #ffffff;
+    margin: 38px 0;
+}
+#wpbody-content .coworking-interface-section.large-section h2 {
+    padding-top: 18px;
+    text-align: center;
+    line-height: 1.4;
+}
+#wpbody-content .coworking-interface-section.large-section p {
+    max-width: 480px;
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: center;
+    color: #79879a;
+}
+#wpbody-content .coworking-interface-section .coworking-interface-hero img {
+    height: 140px;
+}
+#wpbody-content .coworking-interface-columns {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: -12px -12px 50px -12px;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+#wpbody-content .coworking-interface-columns .coworking-interface-column {
+    width: 33.33%;
+    padding: 12px;
+}
+#wpbody-content .coworking-interface-columns .coworking-interface-column.column-6 {
+    width: 50%;
+}
+#wpbody-content .coworking-interface-columns .coworking-interface-column.column-12 {
+    width: 100%;
+}
+#wpbody-content .coworking-interface-columns .coworking-interface-changelog {
+    max-height: 500px;
+    overflow: scroll;
+}
+#wpbody-content .coworking-interface-columns.plugins .coworking-interface-box {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#wpbody-content .coworking-interface-columns.plugins .coworking-interface-box > div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+#wpbody-content .coworking-interface-columns.plugins .plugin-image {
+    position: absolute;
+    top: 5%;
+    left: -10%;
+    height: 90%;
+    opacity: 0.05;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#wpbody-content .coworking-interface-columns.plugins .plugin-image img {
+    height: 100%;
+    pointer-events: none;
+    border-radius: 16px;
+}
+#wpbody-content .coworking-interface-columns.plugins p {
+    margin: 5px 0 0 0;
+    min-height: 75px;
+}
+#wpbody-content .coworking-interface-columns.plugins .plugin-info {
+    position: relative;
+    z-index: 2;
+}
+#wpbody-content .coworking-interface-columns.plugins .si-active-plugin {
+    -js-display: inline-flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: auto;
+    font-weight: 400;
+    color: #79ba49;
+}
+#wpbody-content .coworking-interface-columns.plugins .coworking-interface-buttons {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 0;
+    margin-top: 1.2em;
+}
+#wpbody-content .coworking-interface-columns.plugins .dashicons {
+    height: 18px;
+    margin-right: 5px;
+}
+#wpbody-content .coworking-interface-box {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    border: 1px solid #d6e1e8;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    overflow: hidden;
+    position: relative;
+}
+#wpbody-content .coworking-interface-box p {
+    color: #66717f;
+    line-height: 1.7;
+}
+#wpbody-content .coworking-interface-box p:last-child {
+    margin-bottom: 0;
+}
+#wpbody-content .coworking-interface-box h4 {
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    color: #131313;
+}
+#wpbody-content .coworking-interface-box h4 i {
+    width: auto;
+    height: auto;
+    color: #66717f;
+    font-size: 24px;
+    line-height: 16px;
+    vertical-align: middle;
+    opacity: 0.5;
+    display: inline-block;
+    padding-right: 12px;
+}
+#wpbody-content .coworking-interface-box .coworking-interface-buttons {
+    margin: auto 0 0 0;
+    padding-top: 9px;
+}
+#wpbody-content .changelog-version {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 16px;
+    color: #55718c;
+    background-color: #d6e1ec;
+    margin: 0 12px;
+    padding: 5px 7px;
+    margin-top: 1px;
+}
+/**
+ * Import admin page footer styles.
+ */
+#wpfooter {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+#coworking-interface-footer {
+    border-top: 1px #d6e1e8 solid;
+    border-bottom: 1px #d6e1e8 solid;
+    margin-top: 0;
+    margin-bottom: 18px;
+    margin-left: -35px;
+    margin-right: -35px;
+    text-align: center;
+    font-size: 13px;
+    color: #66717f;
+}
+#coworking-interface-footer ul {
+    margin: 0 35px;
+    padding: 0;
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+#coworking-interface-footer ul li {
+    margin: 0;
+}
+#coworking-interface-footer ul li a {
+    text-decoration: none;
+    -js-display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 15px 10px;
+    color: inherit;
+}
+#coworking-interface-footer ul li a:hover {
+    color: #131313;
+}
+#coworking-interface-footer ul li a:hover > span {
+    text-decoration: underline;
+}
+#coworking-interface-footer ul li a:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: thin dotted #7f8a99;
+}
+#coworking-interface-footer ul li a .dashicons {
+    font-size: 18px !important;
+    height: 18px;
+    line-height: 18px;
+    margin-right: 3px;
+    text-decoration: none !important;
+}
+#coworking-interface-footer ul li a .dashicons-heart {
+    color: #e04b43;
+}
+p#footer-upgrade {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    float: none;
+    text-align: center;
+    font-size: 11px;
+    color: #8d98a7;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-bottom: 1rem;
+}
+p#footer-upgrade a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 5px;
+    color: #66717f;
+}
+p#footer-upgrade a:hover {
+    color: #424F7A;
+}
+p#footer-upgrade .dashicons {
+    font-size: 16px !important;
+    height: 16px;
+    line-height: 16px;
+}
+/**
+ * Import admin page responsive styles.
+ */
+/*****************************************/
+/* Admin page responsive styles
+/*****************************************/
+@media screen and (max-width: 782px) {
+    .auto-fold #wpcontent {
+        padding-left: 0;
+    }
+    #wpbody-content .coworking-interface-columns .coworking-interface-column {
+        width: 50%;
+    }
+    .plugin-image {
+        display: none;
+    }
+}
+.interface-smartocs .smartocs__content-container {
+    padding: 0;
+}
+.interface-smartocs .smartocs__content-container-content--main {
+    margin: 0;
+    box-shadow: none;
+}
+.interface-smartocs .smartocs__file-upload-container {
+    border: none;
+    box-shadow: none;
+}
+.interface-smartocs .smartocs__gl-item {
+    position: relative;
+}
+#recommended-plugins .plugins {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    row-gap:10px;
+}
+@media screen and (max-width: 600px) {
+    #wpbody-content,
+    #coworking-interface-header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #wpbody-content .coworking-interface-section.large-section p {
+        max-width: 100%;
+    }
+    .admin-bar #wpcontent {
+        padding-top: 46px;
+    }
+    .coworking-interface-tabs > ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 0;
+    }
+    .coworking-interface-tabs > ul > li {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0;
+        border-bottom: 1px solid #d6e1e8 !important;
+    }
+    .coworking-interface-tabs > ul > li:last-child {
+        border-bottom: none !important;
+    }
+    #wpbody-content .coworking-interface-section-title {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        width: 100%;
+    }
+    #wpbody-content .coworking-interface-section-title .coworking-interface-filters {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    #wpbody-content .coworking-interface-section-title .coworking-interface-dropdown-filter > ul {
+        right: auto;
+        left: 0;
+    }
+    #wpbody-content .coworking-interface-section-title .interface-info-icon {
+        display: none;
+    }
+    #wpbody-content .coworking-interface-columns .coworking-interface-column {
+        width: 100% !important;
+    }
+    #wpbody {
+        padding-top: 0;
+    }
+    .hide-button-label {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+@media (max-width: 1024px) {
+    .interface-container .smartocs--smart-import .button-upgrade {
+        width: 100%;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+        min-width: 100%;
+        text-align: center;
+    }
+}
+.interface-container .smartocs--smart-import  .notice{
+    display:none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+.interface-container .smartocs__gl-item-image-container::after {
+    padding-top: 100%;
+}
