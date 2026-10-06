@@ -104,6 +104,8 @@ if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
     $_SERVER['HTTPS'] = 'on';
 }
 
+define('FS_METHOD', 'direct');
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
