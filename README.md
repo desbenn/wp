@@ -1,2 +1,2 @@
-# adassa-zoo
+# Adassa Zoo
 Adassa Zoo
